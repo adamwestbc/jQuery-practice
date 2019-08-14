@@ -1,0 +1,14 @@
+
+jquery fns
+
+$(function() {
+
+$
+hide()
+toggle()
+fadeIn()
+faceOut()
+delay()
+slideDown()
+css({})
+html('')
