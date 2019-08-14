@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 4;
+            grid-template-rows: 4;
+            grid-column-gap: 8px;
+        }
+        .item1 {
+            grid-column: 3 span;
+            background: lightgrey;
+            border-radius: 8px;
+            color: rgb(66, 66, 66);
+           
+            padding: 32px;
+            text-align: center;
+            grid-row: 1 / 2;
+            grid-column-start: 1 / 4;
+        }
+        .item2 {
+            background: lightblue;
+            border: rgb(98, 193, 224);
+            border-radius: 8px;
+            margin: 16px;
+            padding: 32;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class ="item1">
+                <h1>Let's Have Fun!</h1>
+
+            <p class="subitem">
+                <button id="btn1">suh</button>
+                <button id="btn2">2</button>
+                <button id="btn3">3</button>
+            </p>
+        </div>
+        <div id = 'panel1' class ="item2">
+            heyo
+            <p class="subitem"></p>
+        </div>
+        <div id = 'panel2' class ="item2">
+            mr. rogers
+            <p class="subitem"></p>
+        </div>
+        <div id = 'panel3' class ="item2">
+            whaddup
+            <p class="subitem">
+                its ya boi
+            </p>
+        </div>
+    </div>
+    
+</body>
+
+<script src="../../jquery-3.4.1.js"></script>
+
+<script>
+    $(document).ready(function() {
+        
+        // $('#panel1').hide(400);
+        $('#btn1').on('mouseover', function() {
+            $('#panel1').fadeToggle(200);
+        });
+        $('#btn2').on('mouseover', function() {
+            $('#panel2').fadeToggle(200);
+        });
+        $('#btn3').on('click', function() {
+            $('#panel3 .subitem').html('whaddup');
+        });
+    })
+
+</script>
+</html>
